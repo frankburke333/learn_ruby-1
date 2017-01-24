@@ -7,7 +7,5 @@ def subtract(x, y)
 end
 
 def sum(a)
-
-a.inject{ |sum,x| sum + x }.to_i
-
+a.inject(:+).to_i
 end
