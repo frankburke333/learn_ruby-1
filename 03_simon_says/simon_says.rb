@@ -21,16 +21,18 @@ end
 
 
 def titleize(s)
- string = s.split(" ")
- string.each do |word|
-   word.capitalize! unless word == "over" || word == "the" || word == "and"
- end
-
-  string[0].capitalize
-
-  string.join(" ")
-
+  small_words = ["and", "over", "the"]
+  capitalized_words =[]
+  s.split.each do |cap| unless small_words.include?(cap)
+    capitalized_words << cap.capitalize
+  else
+    capitalized_words << cap
+    end
+  end
+  capitalized_words[0] = capitalized_words[0].capitalize
+  capitalized_words.join(" ")
 end
+
 
 
 

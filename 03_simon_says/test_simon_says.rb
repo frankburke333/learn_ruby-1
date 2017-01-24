@@ -72,12 +72,12 @@ class TestSimonSays < MiniTest::Test
   def test_titleize_title_case
     assert_equal "David Copperfield", titleize("david copperfield")
   end
-  # #
-  # # def test_titleize_not_little_words
-  # #   assert_equal "War and Peace", titleize("war and peace")
-  # # end
-  # #
-  # # def test_titleize_little_words_at_start
-  # #    assert_equal "The Bridge over the River Kwai", titleize("the bridge over the river kwai")
-  # end
+
+  def test_titleize_not_little_words
+    assert_equal "War and Peace", titleize("war and peace")
+  end
+  #
+  def test_titleize_little_words_at_start
+     assert_equal "The Bridge over the River Kwai", titleize("the bridge over the river kwai")
+  end
 end
