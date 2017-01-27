@@ -18,10 +18,10 @@ class TestFriend < MiniTest::Test
 
     # Hint: remember default values?
     #
-    # def greet(name = ?)
-    #   # your code here
-    # end
-    #
+    def greet(name = "Hello !")
+      "Hello #{name}!"
+    end
+
     # What should ? be equal to?
   end
 end

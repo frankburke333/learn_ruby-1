@@ -9,21 +9,25 @@ require 'pig_latin'
 class TestPigLatin < MiniTest::Test
   # translate
   def test_translate_word_starting_with_vowel
+    # skip
     s = translate("apple")
     assert_equal "appleay", s
   end
-
+  #
   def test_translate_word_starting_with_consonant
+    # skip
     s = translate("banana")
     assert_equal "ananabay", s
   end
-
+  #
   def test_translate_word_starting_with_two_consonants
+    # skip
     s = translate("cherry")
     assert_equal "errychay", s
   end
 
   def test_translates_two_words
+    # skip
     s = translate("eat pie")
     assert_equal "eatay iepay", s
   end
@@ -31,12 +35,12 @@ class TestPigLatin < MiniTest::Test
   def test_translates_word_starting_with_three_consonants
     assert_equal "eethray", translate("three")
   end
-
+  #
   def test_translates_sch_as_phoneme
     s = translate("school")
     assert_equal "oolschay", s
   end
-
+  #
   def test_translates_qu_as_phoneme
     s = translate("quiet")
     assert_equal "ietquay", s
@@ -46,7 +50,6 @@ class TestPigLatin < MiniTest::Test
     s = translate("square")
     assert_equal "aresquay", s
   end
-
   def test_translates_many_words
     s = translate("the quick brown fox")
     assert_equal "ethay ickquay ownbray oxfay", s
