@@ -1,44 +1,28 @@
-def echo(x)
-  return "#{x}"
-end
-
-def shout(x)
-  return "#{x}".upcase
-end
-
 def repeat(string, num = 2)
-  return ((string + " ") * num).strip
-end
-
-def start_of_word(s, x)
-  x = x - 1
-  return s[0..x]
-end
-
-def first_word(s)
-  return s.split.first
+  ((string + " ") * num).strip
 end
 
 
-def titleize(s)
-  small_words = ["and", "over", "the"]
-  capitalized_words =[]
-  s.split.each do |cap| unless small_words.include?(cap)
-    capitalized_words << cap.capitalize
-  else
-    capitalized_words << cap
+def start_of_word(string, num)
+  string[0..num-1]
+end
+
+def first_word(string)
+  s = string.split("")
+  s(1)
+end
+
+
+def titleize(string)
+  small_words = ["the", "over", "and"]
+  final_string = []
+  string = string.each do |caps|
+    if caps == small_words
+      final_string << caps
+
+    else
+      final_string << caps.capitalize
     end
+    final_string[0].capitalize
   end
-  capitalized_words[0] = capitalized_words[0].capitalize
-  capitalized_words.join(" ")
 end
-
-
-
-
-
-
-
-# def titleize(s)
-#   return s.split.map(&:capitalize).join(' ')
-# end

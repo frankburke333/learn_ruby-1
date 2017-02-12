@@ -13,7 +13,7 @@ class TestPigLatin < MiniTest::Test
     s = translate("apple")
     assert_equal "appleay", s
   end
-  #
+  
   def test_translate_word_starting_with_consonant
     # skip
     s = translate("banana")
@@ -54,9 +54,9 @@ class TestPigLatin < MiniTest::Test
     s = translate("the quick brown fox")
     assert_equal "ethay ickquay ownbray oxfay", s
   end
-
-  # Extra challenges:
-  # Write tests and get them to pass for:
-  # * capitalized words are still capitalized (but with a different initial capital letter, of course)
-  # * the punctuation of the original phrase is retained
+  #
+  # # Extra challenges:
+  # # Write tests and get them to pass for:
+  # # * capitalized words are still capitalized (but with a different initial capital letter, of course)
+  # # * the punctuation of the original phrase is retained
 end

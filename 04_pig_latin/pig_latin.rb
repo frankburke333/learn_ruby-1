@@ -5,10 +5,10 @@ end
 def convert_to_pig_latin(word)
   letters = word.chars
   if vowel_first_letter(letters)
-    starts_with_vowel(word)
+      starts_with_vowel(word)
   else
     starts_with_consonant(word)
-end
+  end
 end
 
 def starts_with_vowel(word)
@@ -17,7 +17,7 @@ end
 
 def starts_with_consonant(word)
   word = word.chars
-  word.rotate! until consonant_convert_starting_vowels.include? word[0]
+  word.rotate! until consonant_starts_with_vowels.include? word[0]
   word.join("") + "ay"
 end
 
@@ -29,6 +29,6 @@ def vowel_first_letter(letters)
   vowels.include? letters[0]
 end
 
-def consonant_convert_starting_vowels
-    %w(a e i o)
+def consonant_starts_with_vowels
+  %w(a e i o)
 end
